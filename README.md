@@ -20,7 +20,7 @@ Educational Java project to learn **parameterized tests** in JUnit 5 using a sim
 
 ## Project Structure (Maven example)
 ```text
-dni-letter-tests/
+idNumberCalculation/
 ├── pom.xml
 └── src/
 ├── main/java/
