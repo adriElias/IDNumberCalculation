@@ -5,7 +5,7 @@ public class IDNumberCalculator {
                                             'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L',
                                             'C', 'U', 'E'};
 
-    public static char calculateLetter(int number){
+    public char calculateLetter(int number){
         if(number < 0 || number > 99999999){
             throw new IllegalArgumentException("The ID number must be between 0 and 99999999");
         }

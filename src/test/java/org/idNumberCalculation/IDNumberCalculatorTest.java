@@ -23,21 +23,20 @@ public class IDNumberCalculatorTest {
     })
 
     void should_return_correct_letter_for_valid_id_number(int number, char letter){
-        assertThat(IDNumberCalculator.calculateLetter(number)).isEqualTo(letter);
+        assertThat(idNumberCalculator.calculateLetter(number)).isEqualTo(letter);
     }
 
     @Test
     void should_throw_exception_for_negative_number(){
-        assertThatThrownBy(()-> IDNumberCalculator.calculateLetter(-1))
+        assertThatThrownBy(()-> idNumberCalculator.calculateLetter(-1))
                                 .isInstanceOf(IllegalArgumentException.class)
                                 .hasMessage("The ID number must be between 0 and 99999999");
     }
 
     @Test
     void should_throw_exception_for_number_too_large(){
-        assertThatThrownBy(()-> IDNumberCalculator.calculateLetter(100000000))
+        assertThatThrownBy(()-> idNumberCalculator.calculateLetter(100000000))
                                 .isInstanceOf(IllegalArgumentException.class)
                                 .hasMessage("The ID number must be between 0 and 99999999");
     }
-
 }
